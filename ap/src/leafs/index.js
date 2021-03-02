@@ -10,7 +10,7 @@ function Component() {
         const lists = document.getElementsByClassName('material-container')
         const buttons=document.getElementsByClassName('fas')
 
-        if (window.innerWidth<=660) {
+        if (window.innerWidth<=1200) {
             if (targetList.classList.contains('active')) {
                 targetList.classList.remove('active')
             } else {
