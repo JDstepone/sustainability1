@@ -2,32 +2,34 @@ import React from 'react'
 import './style.css'
 
 function Component() {
-    let impact = 'waste'
     const handleClick = (e) => {
-        const name = e.target.getAttribute('id')
-        const targetList = document.getElementById(name);
-        const targetBtn = document.getElementById(`btn-${name}`)
+        const id = e.target.getAttribute('id')
+        const targetList = document.getElementById(id);
+        const targetBtn = document.getElementById(`btn-${id}`)
         const lists = document.getElementsByClassName('material-container')
-        const buttons=document.getElementsByClassName('fas')
-
-        if (window.innerWidth<=1200) {
+        const buttons = document.getElementsByClassName('material-header-close-icon')
+        const classStrClose = 'material-header-close-icon fas fa-plus'
+        const classStrOpen = 'material-header-close-icon fas fa-minus'
+        // only allow click-to-close on mobile
+        if (window.innerWidth <= 1100) {
+            // if clicked tab is open, close tab
             if (targetList.classList.contains('active')) {
                 targetList.classList.remove('active')
             } else {
+                // if clicked tab is closed, open tab and close other tabs
                 for (let i = 0; i < lists.length; i++) {
                     lists[i].classList.remove('active')
                 }
-                for(let i=0;i<buttons.length;i++){
-                    buttons[i].classList.replace('fa-minus','fa-plus')
+                // change close icon on all closed tabs
+                for (let i = 0; i < buttons.length; i++) {
+                    buttons[i].classList.replace('fa-minus', 'fa-plus')
                 }
                 targetList.classList.add('active')
             }
-            if (targetBtn.className==='fas fa-plus') {
-                targetBtn.className = 'fas fa-minus'
-            } else {
-                targetBtn.className = 'fas fa-plus'
-            }
-        } else {
+            // toggle tab open and close icon
+            targetBtn.className = targetBtn.className === classStrClose ? classStrOpen : classStrClose
+        } else { 
+            // one tab is always open on desktop
             for (let i = 0; i < lists.length; i++) {
                 lists[i].classList.remove('active')
             }
@@ -52,7 +54,7 @@ function Component() {
             <div id='cotton' className='material-container active' onClick={handleClick} >
                 <div className='material-header'>
                     <h1 className='material-title' >Organic Cotton</h1>
-                    <button className='closeBtn'><span id='btn-cotton' className='fas fa-plus'/></button>
+                    <button className='closeBtn'><span id='btn-cotton' className='material-header-close-icon fas fa-plus' /></button>
                 </div>
                 <div className='material-body'>
                     <p className='material-text'>
@@ -70,7 +72,7 @@ function Component() {
             <div id='nylon' className='material-container' onClick={handleClick} >
                 <div className='material-header'>
                     <h1 className='material-title' >Recycled Nylon</h1>
-                    <button className='closeBtn'><span id='btn-nylon' className='fas fa-plus'/></button>
+                    <button className='closeBtn'><span id='btn-nylon' className='material-header-close-icon fas fa-plus' /></button>
                 </div>
                 <div className='material-body'>
                     <p className='material-text'>
@@ -88,7 +90,7 @@ function Component() {
             <div id='tencel' className='material-container' onClick={handleClick} >
                 <div className='material-header'>
                     <h1 className='material-title' >Tencel Lyocell</h1>
-                    <button className='closeBtn'><span id='btn-tencel' className='fas fa-plus'/></button>
+                    <button className='closeBtn'><span id='btn-tencel' className='material-header-close-icon fas fa-plus' /></button>
                 </div>
                 <div className='material-body'>
                     <p className='material-text'>
@@ -108,7 +110,7 @@ function Component() {
             <div id='wool' className='material-container' onClick={handleClick} >
                 <div className='material-header'>
                     <h1 className='material-title' >Recycled Wool</h1>
-                    <button className='closeBtn'><span id='btn-wool' className='fas fa-plus'/></button>
+                    <button className='closeBtn'><span id='btn-wool' className='material-header-close-icon fas fa-plus' /></button>
                 </div>
                 <div className='material-body'>
                     <p className='material-text'>
@@ -126,7 +128,7 @@ function Component() {
             <div id='silvertech' className='material-container' onClick={handleClick} >
                 <div className='material-header'>
                     <h1 className='material-title' >SilverTech</h1>
-                    <button className='closeBtn'><span id='btn-silvertech' className='fas fa-plus'/></button>
+                    <button className='closeBtn'><span id='btn-silvertech' className='material-header-close-icon fas fa-plus' /></button>
                 </div>
                 <div className='material-body'>
                     <p className='material-text'>
@@ -144,7 +146,7 @@ function Component() {
             <div id='poly' className='material-container' onClick={handleClick} >
                 <div className='material-header'>
                     <h1 className='material-title' >Polyiene</h1>
-                    <button className='closeBtn'><span id='btn-poly' className='fas fa-plus'/></button>
+                    <button className='closeBtn'><span id='btn-poly' className='material-header-close-icon fas fa-plus' /></button>
                 </div>
                 <div className='material-body'>
                     <p className='material-text'>
@@ -163,7 +165,7 @@ function Component() {
             <div id='cashmere' className='material-container' onClick={handleClick} >
                 <div className='material-header'>
                     <h1 className='material-title' >Recycled Cashmere</h1>
-                    <button className='closeBtn'><span id='btn-cashmere' className='fas fa-plus'/></button>
+                    <button className='closeBtn'><span id='btn-cashmere' className='material-header-close-icon fas fa-plus' /></button>
                 </div>
                 <div className='material-body'>
                     <p className='material-text'>
@@ -182,7 +184,7 @@ function Component() {
             <div id='knit' className='material-container' onClick={handleClick} >
                 <div className='material-header'>
                     <h1 className='material-title' >Seamless Knitting</h1>
-                    <button className='closeBtn'><span id='btn-knit' className='fas fa-plus'/></button>
+                    <button className='closeBtn'><span id='btn-knit' className='material-header-close-icon fas fa-plus' /></button>
                 </div>
                 <div className='material-body'>
                     <p className='material-text'>
