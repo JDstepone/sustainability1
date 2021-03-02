@@ -1,0 +1,225 @@
+.material-container{
+    height: 660px;
+    width: 107px;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+}
+.material-container#tencel{
+    background-image: url('https://cdn.shopify.com/s/files/1/2996/1332/files/TENCEL1.jpg?v=1579793439');
+}
+.material-container#cotton{
+    background-image: url('https://cdn.shopify.com/s/files/1/2996/1332/files/organic_basics_sustainablepractices_organiccotton.jpg?723=');
+}
+.material-container#nylon{
+    background-image: url('https://cdn.shopify.com/s/files/1/2996/1332/files/organic_basics_sustainablepractices_recyclednylon_jpg.jpg?723=');
+}
+.material-container#wool{
+
+  background-size: 700px 660px;
+    background-image: url('https://cdn.shopify.com/s/files/1/2996/1332/files/0000_organic_basics_sustainablepractices_wool_1.jpg?723=');
+}
+.material-container#silvertech{
+    background-image: url('https://cdn.shopify.com/s/files/1/2996/1332/files/organic_basics_sustainablepractices_silvertech_everyday.jpg?723=');
+}
+.material-container#poly{
+    background-image: url('https://cdn.shopify.com/s/files/1/2996/1332/files/organic_basics_sustainablepractices_polygiene.jpg?723=');
+}
+.material-container#cashmere{
+    background-image: url('https://cdn.shopify.com/s/files/1/2996/1332/files/OB-PACKS-november-201948921.jpg?79441=');
+}
+.material-container#knit{
+    background-image: url('https://cdn.shopify.com/s/files/1/2996/1332/files/0000_organic_basics_sustainablepractices_seamless.jpg?723=');
+}
+
+.material-header{
+    width: 107px;
+    height: 100%;
+    pointer-events: none;
+}
+.material-title{
+    color: white;
+    writing-mode: tb-rl;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    pointer-events: none;
+}
+.material-body{
+    position: relative;
+    left: 0px;
+    top:0px;
+    width: 0px;
+    transition: 0.3s ease-in-out;
+    height: 100%;
+}
+.material-text{
+    margin-bottom: 20px;
+    font-size: 12.5px;
+    color: #ffffff;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+.material-container.active{
+    width: 1200px;
+    transition: 0.3s ease-in-out;
+}
+.material-container.active .material-body{
+    width: 500px;
+    transition: 0.3s ease-in-out;
+    height: 100%;
+}
+#nylon{
+    position: relative;
+    left: 0px;
+}
+#nylon .material-header{
+    background: #333301;
+}
+#nylon .material-body{
+    background: #333301;
+}
+#cotton .material-header{
+    background: #d3ccba;
+}
+#cotton .material-body{
+    background: #d3ccba;
+}
+#tencel .material-header{
+    background: #8f8a6f;
+}
+#tencel .material-body{
+    background: #8f8a6f;
+}
+#wool .material-header{
+    background: #c2c8cc;
+}
+#wool .material-body{
+    background: #c2c8cc;
+}
+#silvertech .material-header{
+    background: #868686;
+}
+#silvertech .material-body{
+    background: #868686;
+}
+#poly .material-header{
+    background: #c5c5c8;
+}
+#poly .material-body{
+    background: #c5c5c8;
+}
+#cashmere .material-header{
+    background: #b5886a;
+}
+#cashmere .material-body{
+    background: #b5886a;
+}
+#knit .material-header{
+    background: #3b595f;
+}
+#knit .material-body{
+    background: #3b595f;
+}
+.container2{
+    margin-top: 20px;
+    display: flex;
+}
+.closeBtn{
+    display: none;
+}
+
+@media only screen and (min-width: 300px) and (max-width:600px){
+    .container2{
+        width: 100vw;
+        max-width: 100%;
+        display: block;
+        margin-top: 0px;
+        height: 100%;
+        /* overflow: scroll; */
+        overflow-y: scroll;
+    }
+    .closeBtn{
+        display: inline;
+        width: 20px;
+        background: transparent;
+        border:none;
+        color:grey;
+        font-size: 24px;
+        position: absolute;
+        right:20px;
+        top:15px;
+    }
+    .material-title{
+        display: inline;
+        color: white;
+        writing-mode: horizontal-tb;
+        padding-top: 20px;
+        padding-left: 20px;
+        font-size: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        pointer-events: none;
+    }
+    .material-container{
+        position: relative;
+        width: 100vw;
+        max-width: 100%;
+        height: 60px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0px;
+        /* padding-left: 20px; */
+    }
+    .material-body{
+        width: 100vw;
+        height: 0px;
+    }
+    .material-text{
+        animation-delay: 1s;
+        visibility: 10%;
+        padding-left: 20px;
+        margin-top: 0px;
+        font-size: 14px;
+        pointer-events: none;
+    }
+    
+
+.material-header{
+    padding-top: 20px;
+    padding-bottom: 0px;
+    width: 100vw;
+    max-width: 100%;
+    height: 50px;
+    pointer-events: none;
+    position: relative;
+    /* display: flexbox; */
+    /* justify-content: space-between; */
+
+}
+
+@keyframes showtext {
+    0%{
+        visibility: 0%;
+    }
+    100%{
+        visibility: 100%;
+    }
+    
+}
+
+.material-container.active{
+    height: 500px;
+    transition: 0.3s ease-in-out;
+}
+.material-container.active .material-body{
+    height: 250px;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+}
+.material-container.active .material-text{
+    animation: showtext 1s linear forwards;
+}
+}
