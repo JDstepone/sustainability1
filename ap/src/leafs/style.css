@@ -1,40 +1,47 @@
 .material-container{
     height: 660px;
-    width: 107px;
+    width: 6vw;
     transition: 0.3s ease-in-out;
     position: relative;
     display: flex;
     cursor: pointer;
 }
-.material-container#tencel{
+#img-tencel{
+    background-size: cover;
     background-image: url('https://cdn.shopify.com/s/files/1/2996/1332/files/TENCEL1.jpg?v=1579793439');
 }
-.material-container#cotton{
+#img-cotton{
+    background-size: cover;
     background-image: url('https://cdn.shopify.com/s/files/1/2996/1332/files/organic_basics_sustainablepractices_organiccotton.jpg?723=');
 }
-.material-container#nylon{
+#img-nylon{
+    background-size: cover;
     background-image: url('https://cdn.shopify.com/s/files/1/2996/1332/files/organic_basics_sustainablepractices_recyclednylon_jpg.jpg?723=');
 }
-.material-container#wool{
+#img-wool{
 
-  background-size: 700px 660px;
+  background-size: cover;
     background-image: url('https://cdn.shopify.com/s/files/1/2996/1332/files/0000_organic_basics_sustainablepractices_wool_1.jpg?723=');
 }
-.material-container#silvertech{
+#img-silver{
+    background-size: cover;
     background-image: url('https://cdn.shopify.com/s/files/1/2996/1332/files/organic_basics_sustainablepractices_silvertech_everyday.jpg?723=');
 }
-.material-container#poly{
+#img-poly{ 
+    background-size: cover;
     background-image: url('https://cdn.shopify.com/s/files/1/2996/1332/files/organic_basics_sustainablepractices_polygiene.jpg?723=');
 }
-.material-container#cashmere{
+#img-cashmere{
+    background-size: cover;
     background-image: url('https://cdn.shopify.com/s/files/1/2996/1332/files/OB-PACKS-november-201948921.jpg?79441=');
 }
-.material-container#knit{
+#img-knit{
+    background-size: cover;
     background-image: url('https://cdn.shopify.com/s/files/1/2996/1332/files/0000_organic_basics_sustainablepractices_seamless.jpg?723=');
 }
 
 .material-header{
-    width: 107px;
+    width: 6vw;
     height: 100%;
     pointer-events: none;
 }
@@ -54,6 +61,15 @@
     transition: 0.3s ease-in-out;
     height: 100%;
 }
+.material-img{
+    position: relative;
+    left: 0px;
+    top:0px;
+    width: 0px;
+    transition: 0.3s ease-in-out;
+    height: 100%;
+
+}
 .material-text{
     margin-bottom: 20px;
     font-size: 12.5px;
@@ -62,11 +78,16 @@
     margin-top: 20px;
 }
 .material-container.active{
-    width: 1200px;
+    width: 57.5vw;
     transition: 0.3s ease-in-out;
 }
 .material-container.active .material-body{
-    width: 500px;
+    width: 28.5vw;
+    transition: 0.3s ease-in-out;
+    height: 100%;
+}
+.material-container.active .material-img{
+    width: 29vw;
     transition: 0.3s ease-in-out;
     height: 100%;
 }
@@ -123,6 +144,7 @@
     background: #3b595f;
 }
 .container2{
+    width: 100vw;
     margin-top: 20px;
     display: flex;
 }
@@ -136,9 +158,10 @@
         max-width: 100%;
         display: block;
         margin-top: 0px;
-        height: 100%;
+        height: 200vh;
+        min-height: 100vh;
         /* overflow: scroll; */
-        overflow-y: scroll;
+        /* overflow-y: scroll; */
     }
     .closeBtn{
         display: inline;
@@ -177,11 +200,16 @@
         width: 100vw;
         height: 0px;
     }
+    .material-img{
+        width: 100vw;
+        height: 0px;
+    }
     .material-text{
         animation-delay: 1s;
         visibility: 10%;
         padding-left: 20px;
-        margin-top: 0px;
+        margin-top: -10px;
+        padding-top: 10px;
         font-size: 14px;
         pointer-events: none;
     }
@@ -215,6 +243,11 @@
     transition: 0.3s ease-in-out;
 }
 .material-container.active .material-body{
+    height: 250px;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+}
+.material-container.active .material-img{
     height: 250px;
     transition: 0.3s ease-in-out;
     width: 100%;

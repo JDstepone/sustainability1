@@ -49,7 +49,7 @@ function Component() {
 
     return (
         <div className='container2' >
-            <div id='cotton' className='material-container' onClick={handleClick} >
+            <div id='cotton' className='material-container active' onClick={handleClick} >
                 <div className='material-header'>
                     <h1 className='material-title' >Organic Cotton</h1>
                     <button className='closeBtn'><span id='btn-cotton' className='fas fa-plus'/></button>
@@ -65,6 +65,7 @@ function Component() {
                         that made this are paid living wages and treated like humans.
                   </p>
                 </div>
+                <div id='img-cotton' className='material-img' ></div>
             </div>
             <div id='nylon' className='material-container' onClick={handleClick} >
                 <div className='material-header'>
@@ -82,6 +83,7 @@ function Component() {
                         that made this are paid living wages and treated like humans.
                   </p>
                 </div>
+                <div id='img-nylon' className='material-img' ></div>
             </div>
             <div id='tencel' className='material-container' onClick={handleClick} >
                 <div className='material-header'>
@@ -101,6 +103,7 @@ function Component() {
                         biodegradable fiber that feels softer and lighter than cotton.
                   </p>
                 </div>
+                <div id='img-tencel' className='material-img' ></div>
             </div>
             <div id='wool' className='material-container' onClick={handleClick} >
                 <div className='material-header'>
@@ -118,6 +121,7 @@ function Component() {
                         aving water and chemicals and eliminating nasty wastewater entirely.
                   </p>
                 </div>
+                <div id='img-wool' className='material-img' ></div>
             </div>
             <div id='silvertech' className='material-container' onClick={handleClick} >
                 <div className='material-header'>
@@ -135,6 +139,7 @@ function Component() {
                         We don’t use nano-silvers as these can be washed off the fabric over time.
                   </p>
                 </div>
+                <div id='img-silver' className='material-img' ></div>
             </div>
             <div id='poly' className='material-container' onClick={handleClick} >
                 <div className='material-header'>
@@ -153,6 +158,7 @@ function Component() {
                         does not contain any nano silvers.
                   </p>
                 </div>
+                <div id='img-poly' className='material-img' ></div>
             </div>
             <div id='cashmere' className='material-container' onClick={handleClick} >
                 <div className='material-header'>
@@ -171,6 +177,7 @@ function Component() {
                         incredible amounts of water, chemicals, energy and CO2.
                   </p>
                 </div>
+                <div id='img-cashmere' className='material-img' ></div>
             </div>
             <div id='knit' className='material-container' onClick={handleClick} >
                 <div className='material-header'>
@@ -185,6 +192,7 @@ function Component() {
                         reduces fabric waste during the production phase.
                   </p>
                 </div>
+                <div id='img-knit' className='material-img' ></div>
             </div>
 
         </div>
